@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Variables 
+    float peso, estatura, imc;
+
+    // Pedir los datos
+    cout << "Ingresa el peso en kg: ";
+    cin >> peso;
+    
+    cout << "Ingresa la estatura en mts: ";
+    cin >> estatura;
+
+    // Validar que los valores sean mayores que cero
+    if (peso > 0 && estatura > 0) {
+        
+        // Calcular el IMC 
+        imc = peso / (estatura * estatura);
+        
+        cout << "Tu IMC es: " << imc << "\n";
+        
+        if (imc < 18.5) {
+            cout << " Bajo peso\n";
+        } else if (imc < 25.0) {
+            cout << " Normal\n";
+        } else if (imc < 30.0) {
+            cout << " Sobrepeso\n";
+        } else {
+            cout << " Obesidad\n";
+        }
+        
+    } else {
+        // Error si meten numeros negativos o cero
+        cout << "Error: El peso y la estatura deben ser mayores que cero. No se puede calcular.\n";
+    }
+
+    return 0;
+}
