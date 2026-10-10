@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    //  Notas y promedio
+    float n1, n2, n3, prom;
+
+    // Pedir las notas
+    cout << "Ingresa la nota 1 (entre 0.0 y 5.0): ";
+    cin >> n1;
+    
+    cout << "Ingresa la nota 2 (entre 0.0 y 5.0): ";
+    cin >> n2;
+    
+    cout << "Ingresa la nota 3 (entre 0.0 y 5.0): ";
+    cin >> n3;
+
+    // Validar que las tres notas esten en el rango correcto
+    if (n1 >= 0.0 && n1 <= 5.0 && n2 >= 0.0 && n2 <= 5.0 && n3 >= 0.0 && n3 <= 5.0) {
+        
+        // Si todo esta bien, calculamos el promedio con los porcentajes
+        prom = (n1 * 0.3) + (n2 * 0.3) + (n3 * 0.4);
+        
+        cout << "Tu promedio es: " << prom << "\n";
+        
+        // Mostrar resultado
+        if (prom >= 4.5) {
+            cout << " Excelente\n";
+        } else if (prom >= 4.0) {
+            cout << " Bueno\n";
+        } else if (prom >= 3.0) {
+            cout << " Aceptable\n";
+        } else {
+            cout << " Reprobado\n";
+        }
+        
+    } else {
+        // Error si se equivocaron al escribir alguna nota
+        cout << "Error: Tu nota no esta entre 0.0 y 5.0. No se puede calcular.\n";
+    }
+
+    return 0;
+}
