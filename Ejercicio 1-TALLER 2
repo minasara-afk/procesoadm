@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int Tsegundos;
+
+    cout << "Ingresa la cantidad de segundos: ";
+    cin >> Tsegundos;
+
+    // DATOS
+    if (Tsegundos < 0) {
+        cout << "Error: Los segundos no pueden ser negativos\n";
+    } else {
+        int horas = Tsegundos / 3600;
+        int minutos = (Tsegundos % 3600) / 60;
+        int segundos = Tsegundos % 60;
+
+        cout << horas << " hora(s), "
+             << minutos << " minuto(s), "
+             << segundos << " segundo(s)\n";
+    }
+
+    return 0;
+}
